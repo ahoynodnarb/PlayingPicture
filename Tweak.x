@@ -15,7 +15,6 @@ static void PreferencesChangedCallback(CFNotificationCenterRef center, void *obs
 %hook PLPlatterView
 -(void)layoutSubviews {
 	%orig;
-	//NSLog(@"playingpicture enabled: %d", isEnabled);
 	if(isEnabled && !imageAdded) {
 		UIImageView *backgroundImageView = [[UIImageView alloc] initWithImage:backgroundImage];
 		backgroundImageView.frame = self.backgroundView.bounds;
