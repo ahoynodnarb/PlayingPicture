@@ -3,7 +3,6 @@
 static void refreshPrefs() {
 	NSDictionary *bundleDefaults = [[NSUserDefaults standardUserDefaults]persistentDomainForName:@"com.popsicletreehouse.playingpictureprefs"];
 	isEnabled = [[bundleDefaults objectForKey:@"isEnabled"]boolValue];
-	NSLog(@"playingpicture enabled: %d", isEnabled);
 	backgroundImage = [[UIImage alloc] initWithData:[bundleDefaults valueForKey:@"backgroundImage"]];
 	isBlur = [[bundleDefaults objectForKey:@"isBlur"]boolValue];
 }
