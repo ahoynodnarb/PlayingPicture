@@ -2,7 +2,7 @@ Package: com.popsicletreehouse.playingpicture
 Name: PlayingPicture
 Version: 0.0.1
 Architecture: iphoneos-arm
-Description: An awesome MobileSubstrate tweak!
+Description: Set your now playing view background to an image of your choice
 Maintainer: PopsicleTreehouse
 Author: PopsicleTreehouse
 Section: Tweaks
