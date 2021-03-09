@@ -20,6 +20,7 @@ static void PreferencesChangedCallback(CFNotificationCenterRef center, void *obs
 		[backgroundImageView setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
 		[backgroundImageView setContentMode:UIViewContentModeScaleAspectFill];
 		[backgroundImageView setClipsToBounds:YES];
+		backgroundImageView._cornerRadius = self.backgroundView._cornerRadius;
 		[self.backgroundView addSubview: backgroundImageView];
 		if(isBlur) {
 			UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleRegular];
@@ -27,7 +28,7 @@ static void PreferencesChangedCallback(CFNotificationCenterRef center, void *obs
 			blurEffectView.frame = self.backgroundView.bounds;
 			blurEffectView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 			blurEffectView.alpha = 0.93f;
-			[self.backgroundView addSubview:blurEffectView];
+			[backgroundImageView addSubview:blurEffectView];
 		}
 	}
 }
